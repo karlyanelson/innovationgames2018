@@ -1,6 +1,6 @@
 module.exports = {
   outputDir: 'docs',
-  baseUrl: '/innovationgames2018/',
+  baseUrl: '',
   assetsDir: undefined,
   runtimeCompiler: undefined,
   productionSourceMap: undefined,
