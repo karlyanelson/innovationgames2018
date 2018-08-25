@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   outputDir: 'docs',
-  baseUrl: undefined,
+  baseUrl: '/innovationgames2018/',
   assetsDir: undefined,
   runtimeCompiler: undefined,
   productionSourceMap: undefined,
