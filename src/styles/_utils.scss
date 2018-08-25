@@ -1,0 +1,103 @@
+/* floats */
+.float-left { float: left; }
+.float-right { float: right; }
+.float-none { float: none; }
+
+.clear-left { clear: left; }
+.clear-right { clear: right; }
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+/* responsive fixed-width container element */
+.responsive-container {
+  padding-right: $md;
+  padding-left: $md;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $bpTablet) {
+    width: 45rem;
+  }
+
+  @media (min-width: $bpLaptop) {
+    width: 55rem;
+  }
+
+  @media (min-width: $bpDesktop) {
+    width: 70rem;
+  }
+}
+
+/* text-overflow */
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* cursors */
+.cursor { cursor: default; }
+.pointer { cursor: pointer; }
+
+/* make things stack on mobile but go horizontal on laptop and larger. super common pattern. use it a lot on the grid. */
+.stacked-mobile {
+  flex-direction: column;
+
+  @media (min-width: $bpTablet) {
+    flex-direction: row;
+  }
+}
+
+/* add this to any element to have the children elements alternate background color. Ideal for tables, nav-lists, etc. */
+.striped-rows {
+  > *:nth-child(odd) {
+    background-color: $nearWhite;
+  }
+
+  > *:nth-child(even) {
+    background-color: $white;
+  }
+}
+
+/* contextual row highlighting */
+.row-info { @include colored-row($infoColor); }
+.row-success { @include colored-row($successColor); }
+.row-warning { @include colored-row($warningColor); }
+.row-error { @include colored-row($errorColor); }
+
+/* list reset */
+.reset-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* overflow utilities */
+.no-overflow { overflow: hidden; }
+.overflow-x { overflow-x: auto; }
+.overflow-y { overflow-y: auto; }
+
+/* remove fuzzy focus ring */
+.no-focus-ring:focus { outline: none; }
+
+/* utility classes from the mixins */
+.font-smoothing { @include font-smoothing(); }
+.font-awesome { @include font-awesome(); }
+.font-awesome-font { @include font-awesome-font(); }
+.roboto-font { @include roboto-font(); }
+.roboto-font-light { @include roboto-font-light(); }
+.roboto-font-regular { @include roboto-font-regular(); }
+.roboto-font-medium { @include roboto-font-medium(); }
+.roboto-font-bold { @include roboto-font-bold(); }
+.roboto-font-condensed-normal { @include roboto-font-condensed-normal(); }

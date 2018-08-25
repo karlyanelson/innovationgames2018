@@ -1,0 +1,39 @@
+#app {
+  display: grid;
+	grid-template-rows: $titleBarHeight auto;
+	grid-template-columns: 1fr;
+	height: 100vh;
+}
+
+.title-bar{
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.main-content {
+  grid-row-start: 2;
+  height: calc(100vh - #{$titleBarHeight});
+  overflow-y: auto;
+  padding: $lg $md;
+}
+
+.card-group {
+  display: flex;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+
+.time-logo{
+  .stroke {
+    stroke: $wwtBlue;
+  }
+}
+
+.wwt-logo {
+  .style0{
+    fill: #EE282A;
+  }
+  .style1{
+    fill: #0780D7;
+  }
+}
