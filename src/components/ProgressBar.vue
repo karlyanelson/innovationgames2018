@@ -1,11 +1,12 @@
 <template>
   <span class="burn-rate">
+    <span>Burn Rate</span>
     <span class="progress-bar">
       <span class="progress-bar-fill" v-bind:style="{ width: totalProgress() + '%' }"></span>
       <span class="progress-bar-background"></span>
     </span>
     <span class="progress-text">
-      <span>{{ completed }}/{{ total }} hours</span>
+      <span>{{ completed }} / {{ total }} hours</span>
       <span>{{ totalProgress() }} %</span>
     </span>
   </span>
@@ -23,25 +24,28 @@ export default {
       return this.completed / this.total * 100
     }
   }
-  // computed:{
-  //   message: 'hey'
-  // }
-  // computed: {
-  //   totalProgress () {
-  //     return (this.completed / this.total * 100)
-  //   }
-  // }
 }
 
 </script>
 
 <style scoped lang="scss">
+.burn-rate,
+.progress-text {
+  display: flex;
+}
+
+.progress-text {
+  flex: 0 0 auto;
+  margin-left: $lg;
+}
+
 .progress-bar {
   height: 1rem;
   width: 100%;
   min-width: 5rem;
   display: inline-block;
   position: relative;
+  flex: 1 1 auto;
 
   &-fill {
     background-color: $blue;
