@@ -1,6 +1,6 @@
 <template>
   <div id="card" class="card">
-    <h1>Project #1234</h1>
+    <h1>Project #{{ project.projectId }}</h1>
     <div class="dateRangeGroup" v-for="(dateRange, index) in project.dateRange" :key="index">
       <div class="week-selector">
         <span class="arrow-left"></span>
@@ -37,5 +37,9 @@ export default {
   padding: $md;
   width: 100%;
   box-shadow: 0px 2px 2px 2px $graySuperLight;
+
+  & + .card {
+    margin-top: $xl;
+  }
 }
 </style>

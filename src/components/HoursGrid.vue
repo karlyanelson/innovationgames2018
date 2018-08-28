@@ -61,7 +61,7 @@ export default {
     ProgressBar
   },
   props: {
-    resources: Object
+    resources: Array
   }
 }
 </script>

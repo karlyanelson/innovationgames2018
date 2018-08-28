@@ -1,7 +1,7 @@
 <template>
   <main class="main-content">
     <div class="card-group">
-      <Card :project="mockData.customer.project" v-for="(project, index) in mockData.customer" :key="index" />
+      <Card v-for="(project, index) in mockData.projects" :key="index" :project="mockData.projects[index]"/>
     </div>
   </main>
 </template>
@@ -24,3 +24,11 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+.card-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
