@@ -11,7 +11,7 @@
         </span>
         <span class="arrow-right"></span>
       </div>
-      <HoursGrid :resources="dateRange.resources" />
+      <HoursGrid :days="dateRange.days" :resources="dateRange.resources" />
     </div>
   </div>
 </template>

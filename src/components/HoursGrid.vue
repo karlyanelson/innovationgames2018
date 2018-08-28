@@ -4,24 +4,24 @@
       <span class="hours-grid-header-col name">Name</span>
       <span class="hours-grid-header-col task">Task</span>
       <span class="hours-grid-header-col day-of-week">
-        <span class="hours-grid-header-day">Mon</span>
-        <span class="hours-grid-header-date">08/05</span>
+        <span class="hours-grid-header-day">{{ days[0].shorthand }}</span>
+        <span class="hours-grid-header-date">{{ days[0].date }}</span>
       </span>
       <span class="hours-grid-header-col day-of-week">
-        <span class="hours-grid-header-day">Tue</span>
-        <span class="hours-grid-header-date">08/05</span>
+        <span class="hours-grid-header-day">{{ days[1].shorthand }}</span>
+        <span class="hours-grid-header-date">{{ days[1].date }}</span>
       </span>
       <span class="hours-grid-header-col day-of-week">
-        <span class="hours-grid-header-day">Wed</span>
-        <span class="hours-grid-header-date">08/05</span>
+        <span class="hours-grid-header-day">{{ days[2].shorthand }}</span>
+        <span class="hours-grid-header-date">{{ days[2].date }}</span>
       </span>
       <span class="hours-grid-header-col day-of-week">
-        <span class="hours-grid-header-day">Thu</span>
-        <span class="hours-grid-header-date">08/05</span>
+        <span class="hours-grid-header-day">{{ days[3].shorthand }}</span>
+        <span class="hours-grid-header-date">{{ days[3].date }}</span>
       </span>
       <span class="hours-grid-header-col day-of-week">
-        <span class="hours-grid-header-day">Fri</span>
-        <span class="hours-grid-header-date">08/05</span>
+        <span class="hours-grid-header-day">{{ days[4].shorthand }}</span>
+        <span class="hours-grid-header-date">{{ days[4].date }}</span>
       </span>
       <span class="hours-grid-header-col total">Total</span>
       <span class="hours-grid-header-col approval">Approval</span>
@@ -61,7 +61,8 @@ export default {
     ProgressBar
   },
   props: {
-    resources: Array
+    resources: Array,
+    days: Array
   }
 }
 </script>
