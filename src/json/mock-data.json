@@ -94,7 +94,7 @@
                 "approved": false,
                 "rejected": false,
                 "burnrate": {
-                  "completed": 600,
+                  "completed": 50,
                   "total": 500
                 }
               }

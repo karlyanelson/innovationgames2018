@@ -27,7 +27,7 @@
       <span class="hours-grid-header-col approval">Approval</span>
     </div>
     <div class="hours-grid-body">
-      <div class="resource-grid" v-for="(resource, index) in resources" :key="index" >
+      <div class="resource-grid" v-for="(resource, index) in resources" v-bind:key="index" >
         <div class="resource-grid-row">
           <span class="resource-grid-col resource-name">{{ resource.name }}</span>
           <span class="resource-grid-col resource-task">{{ resource.task }}</span>
@@ -42,9 +42,6 @@
             <Button btnType="success" text="Approve"/>
           </span>
         </div>
-        <div class="resource-grid-row">
-          <ProgressBar :completed="resource.burnrate.completed" :total="resource.burnrate.total" />
-        </div>
       </div>
     </div>
   </div>
@@ -52,13 +49,11 @@
 
 <script>
 import Button from './Button.vue'
-import ProgressBar from './ProgressBar.vue'
 
 export default {
   name: 'HoursGrid',
   components: {
-    Button,
-    ProgressBar
+    Button
   },
   props: {
     resources: Array,
@@ -76,25 +71,20 @@ export default {
 }
 
 .resource-grid {
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-template-columns: 1fr;
-
-  .burn-rate {
-    grid-column-start: 2;
-    grid-column-end: 8;
-  }
 }
 
 .hours-grid-header {
   grid-row-start: 1;
-  border-bottom: 1px solid $grayVeryLight;
+  border-bottom: 1px solid $graySuperLight;
 }
 
 .resource-hour,
 .hours-grid-header-col.day-of-week,
 .resource-total,
 .hours-grid-header-col.total {
-  border-left: 1px solid $grayVeryLight;
+  border-left: 1px solid $graySuperLight;
   text-align: center;
 }
 
@@ -108,11 +98,7 @@ export default {
 
 .resource-grid {
   padding: $lg 0;
-  border-bottom: 1px solid $grayVeryLight;
-
-  &-row:first-child {
-    margin-bottom: $lg;
-  }
+  border-bottom: 1px solid $graySuperLight;
 }
 
 .hours-grid-header-col,

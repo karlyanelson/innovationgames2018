@@ -1,6 +1,5 @@
 <template>
   <span class="burn-rate">
-    <span>Burn Rate</span>
     <span class="progress-bar">
       <span class="progress-bar-fill" v-bind:style="{ width: totalProgress() + '%' }"></span>
       <span class="progress-bar-background"></span>

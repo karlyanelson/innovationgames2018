@@ -1,31 +1,45 @@
 <template>
   <div id="card" class="card">
     <h1>Project #{{ project.projectId }}</h1>
-    <div class="dateRangeGroup" v-for="(dateRange, index) in project.dateRange" :key="index">
-      <div class="week-selector">
-        <span class="arrow-left"></span>
-        <span class="week-selector-dates">
-          <span class="week-selector-date first">{{ dateRange.start }}</span>
-          <span class="dash">-</span>
-          <span class="week-selector-date last">{{ dateRange.end }}</span>
-        </span>
-        <span class="arrow-right"></span>
-      </div>
-      <HoursGrid :days="dateRange.days" :resources="dateRange.resources" />
-    </div>
+    <button
+      v-for="tab in tabs"
+      v-bind:key="tab"
+      v-bind:class="['tab-button', { active: currentTab === tab }]"
+      v-on:click="currentTab = tab"
+    >{{ tab }}</button>
+
+    <component v-bind:project="project"  v-bind:is="currentTabComponent" />
   </div>
 </template>
 
 <script>
-import HoursGrid from './HoursGrid.vue'
+
+import HoursTab from './HoursTab.vue'
+import BurnRateTab from './BurnRateTab.vue'
 
 export default {
   name: 'Card',
   components: {
-    HoursGrid
+    HoursTab,
+    BurnRateTab
   },
   props: {
     project: Object
+  },
+  data: function () {
+    return {
+      currentTab: 'Hours',
+      tabs: ['Hours', 'Burn Rate']
+    }
+  },
+  computed: {
+    currentTabComponent: function () {
+      if (this.currentTab === 'Hours') {
+        return (HoursTab)
+      } else {
+        return BurnRateTab
+      }
+    }
   }
 }
 </script>

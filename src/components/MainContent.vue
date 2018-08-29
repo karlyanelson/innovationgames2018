@@ -1,7 +1,7 @@
 <template>
   <main class="main-content">
     <div class="card-group">
-      <Card v-for="(project, index) in mockData.projects" :key="index" :project="mockData.projects[index]"/>
+      <Card v-for="(project, index) in mockData.projects" v-bind:key="index" v-bind:project="mockData.projects[index]"/>
     </div>
   </main>
 </template>
@@ -9,7 +9,7 @@
 <script>
 
 import Card from './Card.vue'
-import mockDataJson from '../mock-data.json'
+import mockDataJson from '../json/mock-data.json'
 var mockData = mockDataJson
 
 export default {
