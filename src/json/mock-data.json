@@ -101,6 +101,108 @@
             ]
           }
         ]
+    },
+    {
+        "projectId": "2354",
+        "dateRange": [
+          {
+            "start": "August 6, 2018",
+            "end": "August 10, 2018",
+            "days": [
+              {
+                "name": "Monday",
+                "shorthand": "Mon",
+                "date": "08/06"
+              },
+              {
+                "name": "Tuesday",
+                "shorthand": "Tue",
+                "date": "08/07"
+              },
+              {
+                "name": "Wednesday",
+                "shorthand": "Wed",
+                "date": "08/08"
+              },
+              {
+                "name": "Thursday",
+                "shorthand": "Thu",
+                "date": "08/09"
+              },
+              {
+                "name": "Friday",
+                "shorthand": "Fri",
+                "date": "08/10"
+              }
+            ],
+            "resources": [
+              {
+                "name": "Leeroy Jenkins",
+                "task": "Rebuild backend for customer",
+                "hours": [
+                  {
+                    "day": "MON",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "TUE",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "WED",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "THU",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "FRI",
+                    "hourscompleted": 8
+                  }
+                ],
+                "approved": false,
+                "rejected": false,
+                "burnrate": {
+                  "completed": 250,
+                  "total": 500
+                }
+              },
+              {
+                "name": "James Taylor",
+                "task": "Play guitar",
+                "hours": [
+                  {
+                    "day": "MON",
+                    "hourscompleted": 10
+                  },
+                  {
+                    "day": "TUE",
+                    "hourscompleted": 6
+                  },
+                  {
+                    "day": "WED",
+                    "hourscompleted": 10
+                  },
+                  {
+                    "day": "THU",
+                    "hourscompleted": 6
+                  },
+                  {
+                    "day": "FRI",
+                    "hourscompleted": 10
+                  }
+                ],
+                "approved": false,
+                "rejected": false,
+                "burnrate": {
+                  "completed": 50,
+                  "total": 500
+                }
+              }
+            ]
+          }
+        ]
     }
   ]
 }
