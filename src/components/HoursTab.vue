@@ -10,6 +10,7 @@
         </span>
         <span class="arrow-right"></span>
       </div>
+      <Button btnType="primary" text="Export"/>
       <HoursGrid v-bind:days="dateRange.days" v-bind:resources="dateRange.resources" />
     </div>
   </div>
@@ -17,10 +18,12 @@
 
 <script>
 import HoursGrid from './HoursGrid.vue'
+import Button from './Button.vue'
 export default {
   name: 'HoursTab',
   components: {
-    HoursGrid
+    HoursGrid,
+    Button
   },
   props: {
     project: Object
@@ -28,5 +31,8 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style scoped lang="scss">
+.week-selector {
+  margin-top: $md;
+}
 </style>

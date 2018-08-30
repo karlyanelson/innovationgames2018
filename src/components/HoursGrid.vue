@@ -91,7 +91,7 @@ export default {
   width: 100%;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 1fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr 1.5fr;
   padding: 0;
   align-items: center;
 }
@@ -120,10 +120,16 @@ export default {
   padding-bottom: $lg;
 }
 
+.resource-approval {
+  button {
+    margin: $xxs;
+  }
+}
+
 @media (max-width: 1000px) {
   .hours-grid-row,
   .hours-grid-header {
-    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
   }
 
   .day-of-week,

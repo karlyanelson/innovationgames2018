@@ -56,12 +56,13 @@ h3{
 }
 h1 {
   margin-top: 0;
+  margin-bottom: $lg;
 }
 .card {
   background: $white;
   max-width: 80rem;
   width: 100%;
-  box-shadow: 0px 2px 2px 2px $graySuperLight;
+  box-shadow: 0px 2px 2px 2px rgba($grayVeryLight, .5);
 
   & + .card {
     margin-top: $xl;
@@ -70,27 +71,29 @@ h1 {
 
 .card-header,
 .card-body {
-  padding: $md;
+  padding: $lg;
 }
 
 .card-header {
   border-bottom: 1px solid $grayVeryLight;
-  padding-bottom: $md;
-  margin-bottom: $lg;
+  padding-bottom: 0;
+  padding-top: $md;
+  background: $blue10;
+  color: $white;
 }
 
 .tab-group {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
 }
 
 .tab {
-  color: $wwtBlue;
-  border: 1px solid $wwtBlue;
+  color: $white;
+  border: 1px solid transparent;
   display: inline-block;
   position: relative;
   border-radius: 0;
-  padding: 0.375em .75em;
+  padding: $sm $md;
   font: inherit;
   line-height: $inputLineHeight;
   text-align: center;
@@ -99,26 +102,28 @@ h1 {
   background-color: transparent;
   cursor: pointer;
   transition: all ease 300ms;
-
-  &:first-child {
-    border-top-left-radius: .25rem;
-    border-bottom-left-radius: .25rem;
-  }
-
-  &:last-child {
-    border-top-right-radius: .25rem;
-    border-bottom-right-radius: .25rem;
-  }
+  top: 1px;
 
   &:hover,
   &:focus {
-    background: rgba($wwtBlue, .15);
+    background: rgba($white, .15);
     outline: none;
   }
 
   &.active {
-    background: $wwtBlue;
-    color: $white;
+    // background: $wwtBlue;
+    color: $blue;
+    background: $white;
+    // box-shadow: 0px 1px 2px 4px $grayVeryLight;
+    border-top: 1px solid $grayVeryLight;
+    border-right: 1px solid $grayVeryLight;
+    border-bottom: 1px solid $white;
+    border-left: 1px solid $grayVeryLight;
+
+    &:hover,
+    &:focus {
+      color: $wwtBlue;
+    }
   }
 }
 </style>

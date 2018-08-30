@@ -105,7 +105,7 @@
     },
     {
         "projectId": "2354",
-        "projectTitle": "DNS replacement and server installation at new facility",
+        "projectTitle": "Building a rocketship to Mars",
         "dateRange": [
           {
             "start": "August 6, 2018",
@@ -139,8 +139,8 @@
             ],
             "resources": [
               {
-                "name": "Leeroy Jenkins",
-                "task": "Rebuild backend for customer",
+                "name": "Wallace",
+                "task": "Pick the best cheeses to bring",
                 "hours": [
                   {
                     "day": "MON",
@@ -171,8 +171,8 @@
                 }
               },
               {
-                "name": "James Taylor",
-                "task": "Play guitar",
+                "name": "Grommit",
+                "task": "Build the entire rocket",
                 "hours": [
                   {
                     "day": "MON",

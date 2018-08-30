@@ -47,7 +47,7 @@ export default {
   flex: 1 1 auto;
 
   &-fill {
-    background-color: $blue;
+    background-color: $blue10;
     display: inline-block;
     width: 0%;
     height: 100%;

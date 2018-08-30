@@ -1,5 +1,5 @@
 <template>
-  <button type="button" v-bind:class="['pmr-btn', 'dismiss', btnType]">{{ text }}</button>
+  <button type="button" v-bind:class="['pmr-btn', btnType]">{{ text }}</button>
 </template>
 
 <script>
