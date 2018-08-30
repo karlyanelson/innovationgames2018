@@ -64,7 +64,6 @@ export default {
 }
 
 #app {
-  text-align: center;
   color: $textColorMain;
   font-family: 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-style: normal;

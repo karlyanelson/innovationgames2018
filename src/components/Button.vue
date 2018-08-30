@@ -27,6 +27,7 @@ export default {
   text-decoration: none;
   background-color: transparent;
   cursor: pointer;
+  transition: all ease 300ms;
 
   &::selection {
     background: transparent;

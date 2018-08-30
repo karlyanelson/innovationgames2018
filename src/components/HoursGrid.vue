@@ -27,21 +27,19 @@
       <span class="hours-grid-header-col approval">Approval</span>
     </div>
     <div class="hours-grid-body">
-      <div class="resource-grid" v-for="(resource, index) in resources" v-bind:key="index" >
-        <div class="resource-grid-row">
-          <span class="resource-grid-col resource-name">{{ resource.name }}</span>
-          <span class="resource-grid-col resource-task">{{ resource.task }}</span>
-          <span name="Monday" class="resource-grid-col resource-hour">{{ resource.hours[0].hourscompleted }}</span>
-          <span name="Tuesday" class="resource-grid-col resource-hour">{{ resource.hours[1].hourscompleted }}</span>
-          <span name="Wednesday" class="resource-grid-col resource-hour">{{ resource.hours[2].hourscompleted }}</span>
-          <span name="Thursday" class="resource-grid-col resource-hour">{{ resource.hours[3].hourscompleted }}</span>
-          <span name="Friday" class="resource-grid-col resource-hour">{{ resource.hours[4].hourscompleted }}</span>
-          <span class="resource-grid-col resource-total">{{ resource.hours[0].hourscompleted + resource.hours[1].hourscompleted + resource.hours[2].hourscompleted + resource.hours[3].hourscompleted + resource.hours[4].hourscompleted}}</span>
-          <span class="resource-grid-col resource-approval">
-            <Button btnType="error" text="Reject"/>
-            <Button btnType="success" text="Approve"/>
-          </span>
-        </div>
+      <div class="hours-grid-row" v-for="(resource, index) in resources" v-bind:key="index" >
+        <span class="hours-grid-col resource-name">{{ resource.name }}</span>
+        <span class="hours-grid-col resource-task">{{ resource.task }}</span>
+        <span name="Monday" class="hours-grid-col resource-hour">{{ resource.hours[0].hourscompleted }}</span>
+        <span name="Tuesday" class="hours-grid-col resource-hour">{{ resource.hours[1].hourscompleted }}</span>
+        <span name="Wednesday" class="hours-grid-col resource-hour">{{ resource.hours[2].hourscompleted }}</span>
+        <span name="Thursday" class="hours-grid-col resource-hour">{{ resource.hours[3].hourscompleted }}</span>
+        <span name="Friday" class="hours-grid-col resource-hour">{{ resource.hours[4].hourscompleted }}</span>
+        <span class="hours-grid-col resource-total">{{ resource.hours[0].hourscompleted + resource.hours[1].hourscompleted + resource.hours[2].hourscompleted + resource.hours[3].hourscompleted + resource.hours[4].hourscompleted}}</span>
+        <span class="hours-grid-col resource-approval">
+          <Button btnType="error" text="Reject"/>
+          <Button btnType="success" text="Approve"/>
+        </span>
       </div>
     </div>
   </div>
@@ -65,19 +63,19 @@ export default {
 <style scoped lang="scss">
 .hours-grid {
   display: grid;
-  grid-template-rows: 1fr auto;
-  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto;
   text-align: left;
-}
-
-.resource-grid {
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
+  padding: $lg 0;
 }
 
 .hours-grid-header {
   grid-row-start: 1;
   border-bottom: 1px solid $graySuperLight;
+}
+
+.hours-grid-body {
+  grid-row-start: 2
 }
 
 .resource-hour,
@@ -88,27 +86,55 @@ export default {
   text-align: center;
 }
 
-.resource-grid-row,
+.hours-grid-row,
 .hours-grid-header {
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
   grid-template-columns: 1fr 2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr 1fr;
+  padding: 0;
+  align-items: center;
 }
 
-.resource-grid {
-  padding: $lg 0;
+.hours-grid-row {
   border-bottom: 1px solid $graySuperLight;
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .hours-grid-header-col,
-.resource-grid-col {
+.hours-grid-col {
   display: inline-block;
   padding: $sm;
-  align-self: center;
 }
 
-.hours-grid-body {
-  grid-row-start: 2
+.hours-grid-header-col {
+  display: flex;
+  flex-direction: column;
 }
+
+.hours-grid-col {
+  padding-top: $lg;
+  padding-bottom: $lg;
+}
+
+@media (max-width: 1000px) {
+  .hours-grid-row,
+  .hours-grid-header {
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+  }
+
+  .day-of-week,
+  .resource-hour {
+    display: none;
+  }
+
+  .resource-total,
+  .hours-grid-header-col.total {
+    border-left: none;
+  }
+}
+
 </style>

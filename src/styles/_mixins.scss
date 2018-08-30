@@ -14,6 +14,7 @@
   &:active,
   &:active:focus {
     background-color: darken($mainColor, $activeColorValue);
+    color: $white;
   }
 
   &[disabled="disabled"],
@@ -38,7 +39,7 @@
   &:hover,
   &:focus {
     color: darken($mainColor, $activeColorValue);
-    background-color: tint($mainColor, 90%);
+    background-color: rgba($mainColor, .15);
   }
 
   &:focus {
@@ -46,8 +47,8 @@
   }
 
   &:active {
-    color: darken($mainColor, $activeColorValue);
-    background-color: tint($mainColor, 80%);
+    color: $white;
+    background-color: rgba($mainColor, .75);
   }
 }
 
