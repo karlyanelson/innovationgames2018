@@ -18,7 +18,6 @@ export default {
   border: 1px solid transparent;
   display: inline-block;
   position: relative;
-  border-radius: 0;
   padding: 0.375em .75em;
   font: inherit;
   line-height: $inputLineHeight;
@@ -28,6 +27,7 @@ export default {
   background-color: transparent;
   cursor: pointer;
   transition: all ease 300ms;
+  box-shadow: 1px 1px 2px 2px rgba($grayDark, .15);
 
   &::selection {
     background: transparent;
