@@ -85,9 +85,23 @@ export default {
     }
 }
 
+.ios-toggle {
+  & + .checkbox-label {
+      box-shadow: inset 0 0 0 0 $blue,0 0 0 2px $grayVeryLight;
+  }
+
+  &:focus + .checkbox-label {
+    box-shadow: inset 0 0 0 0 $wwtBlue,0 0 0 2px $wwtBlue;
+
+    &:before {
+        box-shadow: 0 0 0 2px transparent,0 3px 3px $wwtBlue;
+    }
+  }
+}
+
 .ios-toggle:checked {
   & + .checkbox-label {
-      box-shadow: inset 0 0 0 20px $wwtBlue,0 0 0 2px $wwtBlue;
+      box-shadow: inset 0 0 0 20px $blue,0 0 0 2px $blue;
   }
 
   & + .checkbox-label:before {
@@ -100,12 +114,10 @@ export default {
       left: 60px;
       width: 36px;
   }
+
+  &:focus + .checkbox-label {
+    box-shadow: inset 0 0 0 20px $wwtBlue,0 0 0 2px $wwtBlue;
+  }
 }
 
-.ios-toggle + .checkbox-label {
-    box-shadow: inset 0 0 0 0 $wwtBlue,0 0 0 2px $grayVeryLight;
-}
-.ios-toggle:checked + .checkbox-label {
-    box-shadow: inset 0 0 0 18px $wwtBlue,0 0 0 2px $wwtBlue;
-}
 </style>
