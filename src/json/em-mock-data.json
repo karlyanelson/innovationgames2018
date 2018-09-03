@@ -1,4 +1,50 @@
 {
+  "admin": {
+    "customers": [
+      {
+        "name": "Sandwich Queen",
+        "projects": [
+          {
+            "id": "1234",
+            "title": "DNS replacement and server installation at new facility",
+            "hoursEnabled": true
+          },
+          {
+            "id": "2345",
+            "title": "Build rocketship to Mars",
+            "hoursEnabled": false
+          },
+          {
+            "id": "3456",
+            "title": "Discover new sandwiches",
+            "hoursEnabled": false
+          }
+        ]
+      },
+      {
+        "name": "McFarmers",
+        "projects": [
+          {
+            "id": "1234",
+            "title": "DNS replacement and server installation at new facility",
+            "hoursEnabled": true
+          }
+        ]
+      }
+    ],
+    "partners": [
+      {
+        "name": "Consulting Consultants, Inc",
+        "projects": [
+          {
+            "id": "1234",
+            "title": "DNS replacement and server installation at new facility",
+            "hoursEnabled": false
+          }
+        ]
+      }
+    ]
+  },
   "projects": [
     {
         "projectId": "1234",
