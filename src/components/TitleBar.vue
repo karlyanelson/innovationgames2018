@@ -9,7 +9,15 @@
       </svg>
       <span class="app-name">{{ title }}</span>
     </a>
-    <span class="user">Customer</span>
+    <nav class="title-bar-nav">
+      <ul>
+        <li>
+          <a href="index.html">Customer</a>
+          <a href="partner/index.html">Partner</a>
+          <a href="engineering/index.html">Engineering Manager</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </template>
 
@@ -32,7 +40,7 @@ export default {
   padding: 0 $md;
   background: $white;
   z-index: $zTitleBar;
-  box-shadow: 0px 2px 2px 2px $graySuperLight;
+  box-shadow: 0px 2px 2px 2px rgba($grayDark, .15);
 
   .app-title {
     color: $textColorMain;

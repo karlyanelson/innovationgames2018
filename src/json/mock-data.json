@@ -36,7 +36,7 @@
             ],
             "resources": [
               {
-                "name": "Leeroy Jenkins",
+                "name": "Carly Simon",
                 "task": "Rebuild backend for customer",
                 "hours": [
                   {
@@ -96,6 +96,102 @@
                 "rejected": false,
                 "burnrate": {
                   "completed": 50,
+                  "total": 500
+                }
+              },
+              {
+                "name": "Carly Simon",
+                "task": "Rebuild backend for customer",
+                "hours": [
+                  {
+                    "day": "MON",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "TUE",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "WED",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "THU",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "FRI",
+                    "hourscompleted": 8
+                  }
+                ],
+                "approved": false,
+                "rejected": false,
+                "burnrate": {
+                  "completed": 250,
+                  "total": 500
+                }
+              },
+              {
+                "name": "Carly Simon",
+                "task": "Rebuild backend for customer",
+                "hours": [
+                  {
+                    "day": "MON",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "TUE",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "WED",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "THU",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "FRI",
+                    "hourscompleted": 8
+                  }
+                ],
+                "approved": false,
+                "rejected": false,
+                "burnrate": {
+                  "completed": 250,
+                  "total": 500
+                }
+              },
+              {
+                "name": "Carly Simon",
+                "task": "Rebuild backend for customer",
+                "hours": [
+                  {
+                    "day": "MON",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "TUE",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "WED",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "THU",
+                    "hourscompleted": 8
+                  },
+                  {
+                    "day": "FRI",
+                    "hourscompleted": 8
+                  }
+                ],
+                "approved": false,
+                "rejected": false,
+                "burnrate": {
+                  "completed": 250,
                   "total": 500
                 }
               }
@@ -167,6 +263,134 @@
                 "rejected": false,
                 "burnrate": {
                   "completed": 250,
+                  "total": 500
+                }
+              },
+              {
+                "name": "Grommit",
+                "task": "Build the entire rocket",
+                "hours": [
+                  {
+                    "day": "MON",
+                    "hourscompleted": 10
+                  },
+                  {
+                    "day": "TUE",
+                    "hourscompleted": 6
+                  },
+                  {
+                    "day": "WED",
+                    "hourscompleted": 10
+                  },
+                  {
+                    "day": "THU",
+                    "hourscompleted": 6
+                  },
+                  {
+                    "day": "FRI",
+                    "hourscompleted": 10
+                  }
+                ],
+                "approved": false,
+                "rejected": false,
+                "burnrate": {
+                  "completed": 50,
+                  "total": 500
+                }
+              },
+              {
+                "name": "Grommit",
+                "task": "Build the entire rocket",
+                "hours": [
+                  {
+                    "day": "MON",
+                    "hourscompleted": 10
+                  },
+                  {
+                    "day": "TUE",
+                    "hourscompleted": 6
+                  },
+                  {
+                    "day": "WED",
+                    "hourscompleted": 10
+                  },
+                  {
+                    "day": "THU",
+                    "hourscompleted": 6
+                  },
+                  {
+                    "day": "FRI",
+                    "hourscompleted": 10
+                  }
+                ],
+                "approved": false,
+                "rejected": false,
+                "burnrate": {
+                  "completed": 50,
+                  "total": 500
+                }
+              },
+              {
+                "name": "Grommit",
+                "task": "Build the entire rocket",
+                "hours": [
+                  {
+                    "day": "MON",
+                    "hourscompleted": 10
+                  },
+                  {
+                    "day": "TUE",
+                    "hourscompleted": 6
+                  },
+                  {
+                    "day": "WED",
+                    "hourscompleted": 10
+                  },
+                  {
+                    "day": "THU",
+                    "hourscompleted": 6
+                  },
+                  {
+                    "day": "FRI",
+                    "hourscompleted": 10
+                  }
+                ],
+                "approved": false,
+                "rejected": false,
+                "burnrate": {
+                  "completed": 50,
+                  "total": 500
+                }
+              },
+              {
+                "name": "Grommit",
+                "task": "Build the entire rocket",
+                "hours": [
+                  {
+                    "day": "MON",
+                    "hourscompleted": 10
+                  },
+                  {
+                    "day": "TUE",
+                    "hourscompleted": 6
+                  },
+                  {
+                    "day": "WED",
+                    "hourscompleted": 10
+                  },
+                  {
+                    "day": "THU",
+                    "hourscompleted": 6
+                  },
+                  {
+                    "day": "FRI",
+                    "hourscompleted": 10
+                  }
+                ],
+                "approved": false,
+                "rejected": false,
+                "burnrate": {
+                  "completed": 50,
                   "total": 500
                 }
               },

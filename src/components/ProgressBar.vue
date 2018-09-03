@@ -5,8 +5,8 @@
       <span class="progress-bar-background"></span>
     </span>
     <span class="progress-text">
-      <span>{{ completed }} / {{ total }} hours</span>
-      <span>{{ totalProgress() }} %</span>
+      <span class="fraction"><span class="completed">{{ completed }}</span><span class="total">/{{ total }} hours</span></span>
+      <span class="percent">{{ totalProgress() }}%</span>
     </span>
   </span>
 </template>
@@ -31,11 +31,33 @@ export default {
 .burn-rate,
 .progress-text {
   display: flex;
+  align-items: center;
 }
 
 .progress-text {
-  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 0 250px;
   margin-left: $lg;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: right;
+
+  .fraction {
+    letter-spacing: .03em;
+  }
+
+  .completed {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+
+  .percent {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    font-weight: 600;
+  }
 }
 
 .progress-bar {

@@ -66,7 +66,7 @@ export default {
   grid-template-rows: auto auto;
   grid-template-columns: auto;
   text-align: left;
-  padding: $lg 0;
+  padding-top: $md;
 }
 
 .hours-grid-header {
@@ -96,8 +96,17 @@ export default {
   align-items: center;
 }
 
+.hours-grid-header {
+  align-items: flex-end;
+  font-weight: 700;
+}
+
 .hours-grid-row {
   border-bottom: 1px solid $graySuperLight;
+
+  &:nth-child(even){
+    background: rgba($graySuperLight, .5);
+  }
 
   &:last-child {
     border-bottom: none;
@@ -118,6 +127,11 @@ export default {
 .hours-grid-col {
   padding-top: $lg;
   padding-bottom: $lg;
+}
+
+.name,
+.resource-name {
+  padding-left: $md;
 }
 
 .resource-approval {

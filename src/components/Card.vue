@@ -62,16 +62,19 @@ h1 {
   background: $white;
   max-width: 80rem;
   width: 100%;
-  box-shadow: 0px 2px 2px 2px rgba($grayVeryLight, .5);
+  box-shadow: 0px 2px 2px 2px rgba($grayDark, .15);
 
   & + .card {
     margin-top: $xl;
   }
 }
 
-.card-header,
-.card-body {
+.card-header{
   padding: $lg;
+}
+
+.card-body {
+  padding: $lg $md
 }
 
 .card-header {
@@ -84,7 +87,6 @@ h1 {
 
 .tab-group {
   display: flex;
-  // justify-content: center;
 }
 
 .tab {
@@ -93,8 +95,8 @@ h1 {
   display: inline-block;
   position: relative;
   border-radius: 0;
-  padding: $sm $md;
-  font: inherit;
+  padding: $sm $lg;
+  font-size: .875rem;
   line-height: $inputLineHeight;
   text-align: center;
   vertical-align: middle;
@@ -111,10 +113,8 @@ h1 {
   }
 
   &.active {
-    // background: $wwtBlue;
     color: $blue;
     background: $white;
-    // box-shadow: 0px 1px 2px 4px $grayVeryLight;
     border-top: 1px solid $grayVeryLight;
     border-right: 1px solid $grayVeryLight;
     border-bottom: 1px solid $white;

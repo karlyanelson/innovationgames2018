@@ -1,7 +1,8 @@
 <template>
     <div>
-      <Button btnType="primary" text="Export"/>
-
+      <div class="hours-tab-header">
+        <Button btnType="primary" text="Export"/>
+      </div>
       <ul class="burn-rate-list" v-for="(dateRange, index) in project.dateRange" v-bind:key="index">
         <li class="burn-rate-row" v-for="(resource, index) in dateRange.resources" v-bind:key="index">
           <span class="name">{{ resource.name }}</span>
@@ -32,6 +33,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.hours-tab-header {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: $md;
+  padding-right: $md;
+}
+
 .burn-rate-list {
   margin: 0;
   padding: 0;
@@ -46,8 +54,13 @@ export default {
 
 .burn-rate-row {
   display: flex;
-  padding: $lg 0;
+  padding: $lg $md;
   border-bottom: 1px solid $graySuperLight;
+  align-items: center;
+
+  &:nth-child(even){
+    background: rgba($graySuperLight, .5);
+  }
 
   .name{
     flex: 0 0 150px;
