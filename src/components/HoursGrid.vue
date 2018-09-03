@@ -37,8 +37,10 @@
         <span name="Friday" class="hours-grid-col resource-hour">{{ resource.hours[4].hourscompleted }}</span>
         <span class="hours-grid-col resource-total">{{ resource.hours[0].hourscompleted + resource.hours[1].hourscompleted + resource.hours[2].hourscompleted + resource.hours[3].hourscompleted + resource.hours[4].hourscompleted}}</span>
         <span class="hours-grid-col resource-approval">
-          <Button btnType="error" text="Reject"/>
-          <Button btnType="success" text="Approve"/>
+          <Button v-if="resource.approved == false && resource.rejected == false" btnType="error" text="Reject"/>
+          <Button v-if="resource.approved == false && resource.rejected == false" btnType="success" text="Approve"/>
+          <span class="approved" v-if="resource.approved">Approved</span>
+          <span class="rejected" v-if="resource.rejected">Rejected</span>
         </span>
       </div>
     </div>
@@ -137,6 +139,14 @@ export default {
 .resource-approval {
   button {
     margin: $xxs;
+  }
+
+  .approved {
+    color: $greenDark;
+  }
+
+  .rejected {
+    color: $redDark;
   }
 }
 

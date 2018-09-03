@@ -6,7 +6,7 @@
         v-bind:key="tab"
         class="nav-item"
         v-on:click="currentTab = tab">
-          <a v-bind:class="[{ active: currentTab === tab }]" href="#">{{ tab }}</a>
+          <a v-bind:class="[{ active: currentTab === tab }]">{{ tab }}</a>
         </li>
       </ul>
     </nav>
@@ -73,6 +73,7 @@ export default {
       display: flex;
       align-items: center;
       height: 100%;
+      cursor: pointer;
 
       &:hover {
         background: rgba(0,0,0,.18);

@@ -124,8 +124,8 @@
                     "hourscompleted": 8
                   }
                 ],
-                "approved": true,
-                "rejected": false,
+                "approved": false,
+                "rejected": true,
                 "burnrate": {
                   "completed": 250,
                   "total": 500

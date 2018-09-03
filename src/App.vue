@@ -203,6 +203,7 @@ export default {
     transition: 300ms all ease;
     position: relative;
     margin: 0 $sm;
+    background: transparent;
 
     &:after {
       content: "";
