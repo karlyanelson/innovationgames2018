@@ -1,8 +1,8 @@
 <template>
   <div id="card" class="card">
     <div class="card-header">
-      <h3>Project #{{ project.projectId }}</h3>
-      <h1>{{ project.projectTitle }}</h1>
+      <h3 v-if="project.projectId">Project #{{ project.projectId }}</h3>
+      <h1 v-if="project.projectTitle">{{ project.projectTitle }}</h1>
       <div class="tab-group">
         <button
           v-for="tab in tabs"

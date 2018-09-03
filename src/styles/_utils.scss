@@ -77,7 +77,7 @@
 .row-error { @include colored-row($errorColor); }
 
 /* list reset */
-.reset-list {
+@mixin reset-list {
   margin: 0;
   padding-left: 0;
   list-style: none;
